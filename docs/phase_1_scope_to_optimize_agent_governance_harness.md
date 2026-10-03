@@ -129,11 +129,11 @@ Total Estimated Effort: **18 Hours** across 4 Execution Sprints.
 | **9.0 - 10.5** | **BIDI-01** | Establish async duplex WebSocket client for `gemini-2.0-flash-exp` using verified Gemini API key in GitHub Codespace. | `src/streaming/bidi_client.py` |
 | **10.5 - 12.0** | **BIDI-02** | Implement streaming generators for 16kHz PCM audio chunking (20ms frames) and video stream compressor (5-10 FPS rate-limited WebP/JPEG). | `src/streaming/media_chunker.py` |
 | **12.0 - 13.0** | **BIDI-03** | Implement stateful response stream parser: extract text, speech tokens, and dynamic tool/automation calls concurrently. | `src/streaming/response_parser.py` |
-| **13.0 - 14.0** | **BIDI-04** | End-to-end latency measurement benchmark: track roundtrip time from audio injection to synthetic voice packet return. | `tests/test_bidi_latency.py` |
+| **13.0 - 14.0** | **BIDI-04** | End-to-end latency measurement benchmark: track roundtrip time from audio injection to synthetic voice packet return. | ⁠`tests/test_bidi_latency.py` |
 
 ### Sprint 4: Harness Orchestration, Closed-Loop Integration & Audit (Hours 14.0 - 18.0)
 | Hour Window | Task ID | Description & Artifacts | Output / Deliverable |
 | :--- | :--- | :--- | :--- |
 | **14.0 - 15.5** | **INT-01** | Wire closed-loop pipeline: Bidi audio/vision -> Gemini code proposal -> AST validation -> Cloud Run execution -> Output stream back to Gemini context. | `src/orchestration/harness_pipeline.py` |
 | **15.5 - 16.5** | **INT-02** | Implement low-RAM memory watchdog: measure RSS resident memory under active streaming sessions; verify < 384 MiB constraint. | `src/utils/memory_monitor.py` |
-| **16.5 - 17
+| **16.5
