@@ -4,3 +4,13 @@ __pycache__/
 .pytest_cache/
 .venv/
 .aider*
+env/                                                                                                                                                              
+venv/                                                                                                                                                             
+*.egg-info/                                                                                                                                                       
+.coverage                                                                                                                                                         
+htmlcov/                                                                                                                                                          
+*.log                                                                                                                                                             
+                                                                                                                                                                  
+# Prevent accidental shell redirection / command artifacts                                                                                                        
+python3*                                                                                                                                                          
+\|*      
