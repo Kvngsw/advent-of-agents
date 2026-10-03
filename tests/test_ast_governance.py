@@ -8,7 +8,7 @@ from src.governance.ast_policy import (
     enforce_code_safety,
     validate_code_safety,
 )
-from src.governance/token_signer import TokenSigner, hash_code_payload
+from src.governance.token_signer import TokenSigner, hash_code_payload
 
 
 def test_safe_python_code() -> None:
