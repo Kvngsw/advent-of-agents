@@ -136,4 +136,25 @@ Total Estimated Effort: **18 Hours** across 4 Execution Sprints.
 | :--- | :--- | :--- | :--- |
 | **14.0 - 15.5** | **INT-01** | Wire closed-loop pipeline: Bidi audio/vision -> Gemini code proposal -> AST validation -> Cloud Run execution -> Output stream back to Gemini context. | `src/orchestration/harness_pipeline.py` |
 | **15.5 - 16.5** | **INT-02** | Implement low-RAM memory watchdog: measure RSS resident memory under active streaming sessions; verify < 384 MiB constraint. | `src/utils/memory_monitor.py` |
-| **16.5
+| **16.5 - 17.5** | **INT-03** | Implement CLI interactive demo runner for teleoperation simulations directly from Codespace terminal. | `src/cli/run_harness.py` |
+| **17.5 - 18.0** | **INT-04** | Complete end-to-end verification, benchmark documentation, and audit logging validation. | `docs/verification_report.md` |
+
+---
+
+## 8. Development Environment & Execution Guide (GitHub Codespace)
+
+### 8.1 Prerequisites & Environment Setup
+- Python 3.10+
+- Google Cloud SDK (`gcloud` CLI) authenticated
+- Gemini API Key configured in `GEMINI_API_KEY`
+- Cloud Run service deployment permissions in GCP project
+
+### 8.2 Execution Commands
+1. Verify Gemini API key configuration:
+   `python3 -c "import os; assert os.environ.get('GEMINI_API_KEY'), 'GEMINI_API_KEY missing'"`
+2. Deploy sandbox to Cloud Run:
+   `bash scripts/deploy_sandbox.sh`
+3. Run governance policy validation tests:
+   `pytest tests/test_ast_governance.py -v`
+4. Execute Bidirectional streaming teleoperation harness:
+   `python3 -m src.cli.run_harness --mode interactive --telemetry`
