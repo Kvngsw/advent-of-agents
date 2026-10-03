@@ -1,7 +1,7 @@
 # Product Specification & Implementation Blueprint: Phase 1 Scope-to-Optimize Agent Governance Harness
 
 **Document Version:** 1.0.0  
-**Target Milestone:** Phase 1 (Days 7–8 Integration: Cloud Run Sandbox Execution & Gemini Live Bidirectional Streaming)  
+**Target Milestone:** Phase 1 (Days 7-8 Integration: Cloud Run Sandbox Execution & Gemini Live Bidirectional Streaming)  
 **Author:** Principal Technical Product Manager & Systems Architect  
 **Status:** Approved for Implementation  
 
