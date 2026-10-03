@@ -95,7 +95,7 @@ async def test_async_sandbox_client() -> None:
     # Initialize client with the app transport for in-memory testing
     async with CloudRunSandboxClient(endpoint_url="http://testserver", secret_key=secret) as sandbox_client:
         import httpx
-        sandbox_client._client = httpx.AsyncClient(app=app, base_url="http://testserver")
+        sandbox_client._client = httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://testserver")
         
         result = await sandbox_client.execute(req)
         assert result.success is True
